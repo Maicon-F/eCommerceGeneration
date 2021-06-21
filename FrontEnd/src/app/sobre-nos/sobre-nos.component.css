@@ -20,9 +20,21 @@ p{
     font-size: 60pt;
   }
 
-#foto{
-    height: 880px;
+/*Responsividade*/
+@media screen and (max-width: 600px) {
+  .column {
+    display: block;
+    margin-bottom: 20px;
+    min-width: 0;
     }
+    }
+
+#foto{
+    max-height: 880px;
+min-height: 0;
+    }
+
+    #colFotoQuem{padding: 0;}
 
 .row.heading h2 {
       font-family: "Kinan";
@@ -162,8 +174,9 @@ p{
 }
 
 #quemSomos{
-  margin-left: -50px;
-  width: 730px;
+  width: auto;
+  min-width: 0;
+  max-width: 700px;
 }
 
 #pqHW{
