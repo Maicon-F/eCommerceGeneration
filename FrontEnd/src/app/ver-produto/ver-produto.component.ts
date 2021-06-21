@@ -8,47 +8,49 @@ import { VerProdutoService } from '../service/ver-produto.service';
 import { Categoria } from '../model/Categoria';
 
 @Component({
-  selector: 'app-produto',
+  selector: 'app-ver-produto',
   templateUrl: './ver-produto.component.html',
   styleUrls: ['./ver-produto.component.css'],
 })
 export class VerProdutoComponent implements OnInit {
 
-  verProduto: VerProduto = new VerProduto();
-  public id: number;
-  public nome: string;
-  public tamanho: string;
-  public cor: string;
-  public foto: string;
-  public tema: string;
-  public estoque: number;
-  public preco: number;
-  public modelo: string;
-  public quantidade: number;
-  public subTotal: number;
-  pedido: VerProduto[];
-  user: User = new User();
-  idUser = environment.id;
-
+  verProduto: VerProduto = new VerProduto()
+  pedido: VerProduto[]
+  quantidade: number
+  subTotal: number
+  user: User = new User()
+  idUser = environment.id
+  cor: string
+  tema: string
+  tamanho: string
+  modelo: string
+//ATÉ AQUI SOMA OK
+  public id: number
+  public nome: string
+  public foto: string
+  public estoque: number
+  public preco: number
+  //COM ESSES, MULTIPLICA OK
+  constructor(
+    private router: Router,
+    private aRoute: ActivatedRoute,
+    private verProdutoService: VerProdutoService) {}
+  
+  ngOnInit() {
+      window.scroll(0, 0);
+      let id = this.aRoute.snapshot.params['id'];
+      this.findProdById(id);
+      this.quantidade = 1;//SOMA OK
+      this.subTotal = this.verProduto.preco;
+      this.calculaSubTotal();//MULTIPLICA OK
+      console.log('verproduto ', this.verProduto);//MULTIPLICA OK
+    }
 
   findProdById(id: number) {
     this.verProdutoService.getByIdProduto(id).subscribe((resp: VerProduto) => {
-      this.verProduto = resp;
-      console.log('verproduto ', this.verProduto);
+      this.verProduto = resp
+      console.log('verproduto ', this.verProduto);//MULTIPLICA OK
     });
-  }
-
-  ngOnInit() {
-    window.scroll(0, 0);
-
-    let id = this.aRoute.snapshot.params['id'];
-    this.findProdById(id);
-
-
-    this.subTotal = this.verProduto.preco;
-
-    this.calculaSubTotal();
-    console.log('verproduto ', this.verProduto);
   }
 
   processo(valor: number) {
@@ -68,55 +70,42 @@ export class VerProdutoComponent implements OnInit {
   }
 
   addPedido() {
-    if (environment.token == '') {
+    if (environment.token == "") {
       Swal.fire({
         icon: 'error',
         title: 'Putz!',
         text: 'Faça login para comprar',
       });
 
-      this.router.navigate(['/login']);
+      this.router.navigate(["/login"])
     } else {
+      this.calculaSubTotal()
+      this.pedido = JSON.parse(localStorage.getItem('pedido') || '[]')
 
-      this.calculaSubTotal();
-      const pedidos = localStorage.getItem('pedido');
-      if (pedidos != null) {
-        this.pedido = JSON.parse(pedidos);
-      } else{
-        this.pedido = []
-      }
-      this.verProduto.quantidade = this.verProduto.quantidade == null ? 1 : this.verProduto.quantidade
+      this.pedido.push(
+        {
+          id: this.verProduto.id,
+          nome: this.verProduto.nome,
+          foto: this.verProduto.foto,
+          estoque: this.verProduto.estoque,
+          preco: this.verProduto.preco,
+          categoria: this.verProduto.categoria,
+          user: this.verProduto.user,
+          quantidade: this.quantidade,
+          subTotal: this.subTotal,
+          cor: this.cor,
+          tema: this.tema,
+          tamanho: this.tamanho,
+          modelo: this.modelo
+        })
+      localStorage.setItem('pedido', JSON.stringify(this.pedido))
+      Swal.fire({
+        icon: 'success',
+        title: 'Boa!',
+        text: 'Produto adicionado com sucesso!'
+      })
 
-      const produtoExisteIndex = this.pedido.findIndex(
-        (produto: VerProduto) => produto.id === this.verProduto.id
-      ); // se tiver produto repetido pega só o index
-
-        console.log('produ existe index =', produtoExisteIndex)
-      if (produtoExisteIndex >= 0) {
-        // se o produto existir, aumenta quantidade
-        this.pedido[produtoExisteIndex].quantidade = this.quantidade;
-        
-        
-        this.router.navigate(['/pedido']);
-      } else {
-        this.pedido.push(this.verProduto)
-
-      }
-
-      localStorage.setItem('pedido', JSON.stringify(this.pedido));
-        Swal.fire({
-          icon: 'success',
-          title: 'Parabéns!',
-          text: 'O produto já consta no pedido!',
-        });
-      
-
+      this.router.navigate(['/pedido'])
     }
   }
-
-  constructor(
-    private router: Router,
-    private aRoute: ActivatedRoute,
-    private verProdutoService: VerProdutoService
-  ) {}
 }

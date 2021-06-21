@@ -11,33 +11,42 @@ import Swal from 'sweetalert2'; //Alerta baixado de https://sweetalert2.github.i
   styleUrls: ['./pedido.component.css']
 })
 export class PedidoComponent implements OnInit {
-
-  verProduto: VerProduto = new VerProduto
+  produto: VerProduto = new VerProduto()
   pedido: VerProduto[]
   subTotal: number
   valorTotal: number
   vazio: string
   quantidade: number
-  pedidoInic = { valor: 0 }
+  pedidoInic = {
+    preco: 0
+  }
 
   constructor(
     private authService: AuthService,
-    private router: Router){}
+    private router: Router
+  ) { }
 
   ngOnInit() {
     window.scroll(0,0)
+    if (environment.token == "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'É preciso estar logado para acessar o carrinho'
+      })
+      this.router.navigate(["/login"])
+    }
+
     this.mostrarPedido()
     this.calculaTotal()
-    console.log(this.subTotal)
   }
 
   mostrarPedido() {
-    const localS = localStorage.getItem('pedido')
-    if (localS != null && localS.length > 0) {
+    const localS = localStorage['pedido']
+    if (localS.length > 0) {
       this.pedido = localS ? JSON.parse(localS) : []
-      console.log('pedido = ', this.pedido)
     } else {
-      this.vazio = "Não há pedidos ainda."
+      this.vazio = "O Carrinho está vazio"
       this.valorTotal = 0
     }
   }
@@ -46,14 +55,13 @@ export class PedidoComponent implements OnInit {
     this.valorTotal = 0
     let dadosProd = []
     dadosProd = JSON.parse(localStorage.getItem('pedido') || '{}')
-    dadosProd.forEach((i: { subTotal: any; }) => {
+    dadosProd.forEach((i: any) => {
       this.pedidoInic = {
-        valor: i.subTotal
+        preco: i.subTotal
       }
-      this.valorTotal = this.pedidoInic.valor + this.valorTotal
+      this.valorTotal = this.pedidoInic.preco + this.valorTotal
     })
-    
-    return this.valorTotal.toFixed(2)
+    return this.valorTotal.toFixed(2);
   }
 
 }

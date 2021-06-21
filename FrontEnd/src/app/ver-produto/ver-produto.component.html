@@ -1,17 +1,16 @@
-
-<div class="container mt-3 mb-5">
+<div class="container-fluid justify-content-center">
   <div class="row d-flex justify-content-center">
     <div class="col-md-12">
-      <!--<h1 class="text-center titulo font:Kinan">Indie</h1>-->
-      <h1 class="text-center titulo">{{verProduto.tema}}</h1>
+      <!-- <h1 class="text-center titulo font:Kinan">Indie</h1> -->
+       <h1 class="text-center titulo">Detalhes</h1>
     </div>
   </div>
 
   <!--FOTO DO PRODUTO-->
-
-  <div id="grup" class="col-md-6 d-flex justify-content-center">
-    <a href="">
-      <img  src={{verProduto.foto}} alt="Foto do Produto" height="800px"/>
+  <div class="row">
+    <div id="grup" class="col-md-6 justify-content-center">
+      <a href="">
+        <img src={{verProduto.foto}} alt="Foto do Produto" height="700px" />
 
       <!--<img src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_asas_off_white_7166_1_c7abb27e05a87d60b0737bb521ce3ba6.jpg" alt="Foto do Produto" height="800px"> -->
 
@@ -24,8 +23,8 @@
   </div>
 
 
-    <div class="col5" id="txt-grup">
-      <h2>{{verProduto.nome}}</h2>
+  <div class="col-md-6 justify-content-center" id="txt-grup">
+    <h2>{{verProduto.nome}}</h2>
       <!-- <h2>Woman's Fly</h2> -->
 
 
@@ -35,7 +34,7 @@
       <!-- FIM - ALTERAÇÃO PEGANDO DE PRODUTO: -->
     <!-- <h2>Women Flying</h2> -->
 
-    <h1>{{verProduto.preco.toFixed(2).replace('.', ',')}}</h1>
+    <h1>R$ {{verProduto.preco.toFixed(2).replace('.', ',')}}</h1>
     <!-- <h1>{{produto.preco.toFixed(2).replace('.', ',')}}</h1> -->
     <!-- <h1>R$ 79,90</h1> -->
 
@@ -59,36 +58,27 @@
       <input type="radio" name="1254386558" id="1290346762" value="XXG">
       <label for="1290346762" class="mr-2">XXG</label>
     </div>
-      
-
-      <div class="row d-flex justify-content-center">
-        <div class="ml-4">
-          <div class="y-productSkuSelection justify-content-center" id="divCor">
-            <span class="y-selectionDesc mr-6 justify-content-center">Selecione uma cor:
-              <a class="btn btn-with dropdown-toggle text-white justify-content-center fs-14 mr-8" role="button"
-                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cor
-              </a>
-            </span>
 
     <div class="row d-flex justify-content-center">
       <div class="ml-0">
         <div class="y-productSkuSelection justify-content-center" id="divCor">
-          <span class="y-selectionDesc mr-6 justify-content-center">Selecione uma cor:
-            <a class="btn btn-with dropdown-toggle text-white justify-content-center fs-14 mr-8" role="button"
-              id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="y-selectionDesc mr-6 justify-content-center">Selecione uma cor:</span>
+
+          <div class="nav-item dropdown">
+            <a class="btn btn-with dropdown-toggle fs-14 dropdownbtn" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Cor
             </a>
-          </span>
-
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="" value="Branco">Branco</a>
-            <a class="dropdown-item" href="" value="Preto">Preto</a>
-            <a class="dropdown-item" href="" value="Cinza">Cinza</a>
-            <a class="dropdown-item" href="" value="Vermelho">Vermelho</a>
-            <a class="dropdown-item" href="" value="Rosa">Rosa</a>
-            <a class="dropdown-item" href="" value="Amarelo">Amarelo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item">Branco</a>
+              <a class="dropdown-item">Preto</a>
+              <a class="dropdown-item">Cinza</a>
+              <a class="dropdown-item">Vermelho</a>
+              <a class="dropdown-item">Rosa</a>
+              <a class="dropdown-item">Amarelo</a>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -97,21 +87,20 @@
         <!--QUANTIDADE-->
         <div id="quantrow" class="row">
           <div class="col-ml-16">
-            <p> Quantidade:</p>
-          </div>
-          <div class="col-md-2">
-            <p></p>
+            <p>Digite a quantidade desejada:</p>
           </div>
           <div class="col-ml-5" id="quantidade">
             <!-- <input type="button" id="minus" value="-" /> -->
-            <input type="button" id="minus" (click)="processo(-1)" (click)="calculaSubTotal()" value=" -" />
-            <input id="quantidade" name="quantidade" class="text" size="1" value="1" type="text" maxlength="2" />
+            <!-- <input type="button" id="minus" (click)="processo(-1)" (click)="calculaSubTotal()" (click)="subtraiQuantidade()" value=" -" /> -->
+            <input [(ngModel)]="quantidade" id="quantidade" name="quantidade" type="number" value="" min="1" (click)="calculaSubTotal()" class="ml-3"/>
             <!-- <input type="button" id="plus" value="+"> -->
-            <input type="button" id="plus" (click)="processo(1)" (click)="calculaSubTotal()" value="+ ">
+            <!-- <input type="button" id="plus" (click)="processo(1)" (click)="calculaSubTotal()" click="adicionaQuantidade()" value="+ "> -->
           </div>
         </div>
       </div>
-      <!-- <button type="button" class="btn bb">Adicionar ao pedido</button>-->
-      <button type="button" class="btn bb" (click)="addPedido()">Adicionar ao pedido</button>
     </div>
- 
+    <!-- <button type="button" class="btn bb">Adicionar ao pedido</button>-->
+    <button type="button" class="btn bb w-50" (click)="addPedido()">Adicionar ao pedido</button>
+  </div>
+</div>
+</div>

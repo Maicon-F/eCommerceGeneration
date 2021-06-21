@@ -42,10 +42,12 @@
     background-color: rgb(219, 219, 219);
     border-radius: 10px;
     width: 700px;
+    height: auto;
   }
 
   #produto{
     text-align: center;
+    height: 100%;
   }
 
   #produto img{
@@ -114,12 +116,11 @@
     align-items: center;
     font-size: 40pt;
     font-family: "caramella";
+    width: 200px;
   }
   
   #vazio{
     text-align: center;
     color: red;
   }
-  
-  
   
