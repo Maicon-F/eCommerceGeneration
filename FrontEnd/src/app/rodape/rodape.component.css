@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "caramella";
+    src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+  }
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 35pt;
+    color: white;
+    padding:10px ;
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998;
+}
+
+.fa-whatsapp:hover{
+    color:#25D366;
+}
+
+
+.fa-instagram:hover{
+    color:#ff009d;
+}
+
+.fs-10
+{
+    font-size: 10pt;
+}
+
+h4{
+    font-family: "caramella";
+}

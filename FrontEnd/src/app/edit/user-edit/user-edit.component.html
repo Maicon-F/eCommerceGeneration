@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary mt-5 mb-5">Atualizar minha conta</h1>
+        </div>
+    </div>
+
+    <!--Formulario de atualizacao de conta de usuário-->
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                
+                    <form novalidate="" class="mt-5 ng-pristine ng-valid ng-touched">
+    
+                    <div class="form-group mb-3">
+                        <input [(ngModel)]='user.nome' class="form-control border-top-0 border-right-0 border-left-0" type="text" name="nome" id="nome" placeholder="Seu nome" (keyup)="validaNome($event)">
+                        <div class="invalid-feedback" >
+                          Insira um nome com mais de 2 characters.
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <input [(ngModel)]='user.email' class="form-control border-top-0 border-right-0 border-left-0" type="email" name="email" id="exampleInputEmail1"  placeholder="Seu e-mail" aria-describedby="emailHelp" (keyup)="validaEmail($event)">
+                        <div class="invalid-feedback">
+                          Insira um email válido.
+                        </div>     
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <input [(ngModel)]='user.senha' class="form-control border-top-0 border-right-0 border-left-0" type="password" name="senha" id="senha" placeholder="Sua senha" (keyup)="validaSenha($event)">
+                        <div class="invalid-feedback" >
+                          Insira uma senha com mais de 6 characters.
+                        </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <input (input) = 'confirmSenha($event)' class="form-control border-top-0 border-right-0 border-left-0" type="password" name="confirmarSenha" id="confirmarSenha"
+                            placeholder="Confirme sua senha" (keyup)="confirmaSenhas($event)">
+                            <div class="invalid-feedback" >
+                              Senhas diferentes.
+                            </div>
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <input [(ngModel)]='user.endereco' class="form-control border-top-0 border-right-0 border-left-0" type="text" name="endereco" id="endereço"
+                            placeholder="Digite seu endereço">
+                    </div>
+    
+                    <div class="form-group mb-3">
+                        <input [(ngModel)]='user.telefoneFixo' class="form-control border-top-0 border-right-0 border-left-0" type="text" name="telefoneFixo" id="telefoneFixo"
+                            placeholder="Telefone Fixo">
+                    </div>
+                  
+                    <div class="form-group mb-3">
+                        <input [(ngModel)]='user.telefoneCelular' class="form-control border-top-0 border-right-0 border-left-0" type="text" name="telefoneCelular" id="telefoneCelular"
+                            placeholder="Telefone Celular">
+                    </div>
+    
+                    <div class="d-flex justify-content-center mt-3 mb-5">
+                        <button type="submit" class="btn btn-danger mr-4 mt-3"  routerLink='/home'>Cancelar</button>
+                        <button type="submit" class="btn btn-success mt-3" (click)='atualizar()'>Atualizar</button>
+                    </div>
+                </form>
+                </div>
+              
+
+
+        </div>
+    </div>
+
+</div>
+
+<!--/Formulario de atualizacao de conta de usuário-->
+
