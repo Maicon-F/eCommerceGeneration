@@ -1,0 +1,89 @@
+@font-face {
+  font-family: Kinan;
+  src: url(../../assets/fontes/kinan/Kinan.ttf)
+}
+
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}  
+
+/* 4 colunas lado a lado */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove espaços extras entre colunas */
+.row {margin: 0;}
+
+/* Limpa floats após as colunas */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estiliza os cards */
+.card {
+  box-shadow: 0 4px 8px 0 gray; /* Adiciona o efeito "cartão" */
+  text-align: center;
+  height: 600px;
+  margin-bottom: 20px;
+}
+
+/* Coluna responsiva */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-orange{
+  width: 90%;
+  font-family: "caramella";
+  font-weight: bold;
+  border-color: #FF4500;
+  color: white;
+  background-color: #FF4500;
+}
+
+.btn-orange:hover{
+  width: 90%;
+  font-family: "caramella";
+  font-weight: bold;
+  border-color: #FF4500;
+  color: #FF4500;
+  background-color: white;
+}
+
+#nome{
+  font-family: "caramella";
+}
+
+#preco{
+  color: #4F4F4F;
+  font-family: "caramella";
+  font-weight: bolder;
+  font-size: large;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  font-family: Kinan;
+  font-size: 80pt;
+}
+
+img{
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.foo img:last-child{display:none}
+.foo:hover img:first-child{display:none}
+.foo:hover img:last-child{display:inline-block}

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+  /*Responsividade*/
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: #FF4500;
+}
+
+#temas{
+  color: black;
+}
+
+#temas:hover{
+  color:#FF4500;
+}
+
+.fs-14{
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+  .navbar{
+    font-family: "caramella";
+  }  
+
+  .menu{
+    width: 100%;
+  } 
+
+  .hoover2 :hover {
+    font-weight: bold;
+  }
+
+  input{
+    border-radius: 25px;
+    width: 300px;
+  }
+
+  button{
+    font-family: "caramella";
+  }
+  
+  #dropdownMenuLink{
+    color: white;
+  }
+
+  #dropdownMenuLink:hover{
+    color: #FF4500;
+  }
+
+  div{
+    min-width: 0;
+  }

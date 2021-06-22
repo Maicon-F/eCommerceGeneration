@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.IntegradorG3.LojaPrincipal.model.UserLogin;
 import com.IntegradorG3.LojaPrincipal.model.Usuario;
 import com.IntegradorG3.LojaPrincipal.repository.UsuarioRepository;
+
 import org.apache.commons.codec.binary.Base64;
 
 @Service

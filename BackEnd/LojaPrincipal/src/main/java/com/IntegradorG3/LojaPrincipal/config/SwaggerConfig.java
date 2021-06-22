@@ -27,7 +27,7 @@ public class SwaggerConfig {
 	}
 
 	private Contact contact() {
-		return new Contact("Grupo 3 - Turma 20 - Generation", "https://github.com/jplb/Projeto-Integrador-Generation",
+		return new Contact("Grupo 3 <helloWorld> - Turma 20 - Generation", "https://github.com/LuaBezana/eCommerceGeneration.git",
 				"\nEquipe de Desenvolvedores Full Stack.");
 	}
 }

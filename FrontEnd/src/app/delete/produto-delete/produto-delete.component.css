@@ -1,0 +1,48 @@
+ 
+ td{
+  text-align: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 1em;
+}
+ 
+ 
+ 
+ /* 4 colunas lado a lado numa row */
+ .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    font-size: 18px;
+  }
+  
+  
+  
+  /* Remove margens extras */
+  .row {margin: 0 -5px;}
+  
+  /* limpa floats após colunas*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Estyliza os counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adiciona efeito ao card */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Colunas responsivas - uma imagem vertical em pequenas telas */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }

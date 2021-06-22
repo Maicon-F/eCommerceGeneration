@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+i{
+  font-family: "caramella";
+  font-size: 18pt;
+}
+
+h1{
+  font-family: "caramella";
+  font-size: 40pt;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: -20px;
+}
+
+h2{
+  font-family: "caramella";
+  font-size: 40pt;
+  color: black;
+}
+
+img{
+  height: 400px;
+  width: 300px;
+  margin:0;
+}
+
+/* Remove espaços extras entre colunas */
+.row {margin: 0 -5px;}
+  
+/* Limpa os floats após as colunas*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 4 colunas lado a lado */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.card{
+  border: none;
+}
+
+.div1{
+background-color: #ff4500;
+}
+
+/* Estiliza os cards */
+.card {
+  box-shadow: 0 4px 8px 0 grey; /* Adiciona efeito ao card */
+  padding: 2px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+ /* Colunas responsivas*/
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,103 @@
+
+@font-face {
+  font-family: "Kinan";
+  src: url(../../assets/fontes/kinan/Kinan.ttf)
+}
+
+h1{
+  font-family: "Kinan";
+  font-size: 60pt;
+}
+
+
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+h2{
+  font-size: 50px;
+  font-family: "caramella";
+ }
+
+  .btn{
+      color: white;
+      background-color: #FF4500;
+      width: 90%;
+  }
+
+  .card{
+border:none
+  }
+
+  .carousel-item{
+      width: 100%;
+  }
+
+  img{
+    align-items: center;
+    width: 1100px;
+  }  
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* 4 colunas lado a lado numa row*/
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove espaços extras nas colunas devido ao padding*/
+  .row {margin: 0 -5px;}
+  
+  /* Limpa os floats após as colunas */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Estiliza os cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adiciona efeito ao card */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Colunas responsivas - uma imagem vertical em telas pequenas*/
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  #emAlta{
+    margin-bottom: -50px;
+    margin-top: 60px;
+  }
+  
+  #arts{
+    height: 618px;
+    width: 350px;
+    margin-right: 10pt;
+    margin-left: 9pt;
+    margin-top: 10pt;
+  }
+
+  #camiseta{
+    margin-top: 10pt;
+  }
+  .foo img:last-child{display:none}
+  .foo:hover img:first-child{display:none}
+  .foo:hover img:last-child{display:inline-block}
+

@@ -1,0 +1,35 @@
+<div class="container mt-3 mb-5">
+
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <h1 class="text-center titulo">Buscar... </h1>
+      <h2 class="text-center busca">"{{pesquisa}}"</h2>
+    </div>
+  </div>
+
+  <!--DIV VITRINE-->
+    <!--O que está comentado é para testes sem puxar do banco-->
+    <!--<div class="col-md-3"> <!--*ngFor='let VerProduto of listaProdutos'>-->
+      <div class="col-md-3" *ngFor='let verProduto of listaProdutos'>
+        <!--ESPAÇO COM A CAMISETA-->
+        <!--<div class="card" [routerLink]="['/ver-produto']"><!--, VerProduto.id]">-->
+        <div class="card" [routerLink]="['/ver-produto', verProduto.id]">
+          <div class="d-flex justify-content-center">
+            <!--<img class="img-fluid"
+              src="https://static3.tcdn.com.br/img/img_prod/482157/180_camiseta_t_shirt_sisters_6828_1_cbd723c2f6b107cf0620e5576aaf3f00.jpg"
+              alt="" width="280px">-->
+            <img class="img-fluid" alt="Foto da camiseta" src="{{verProduto.foto}}">
+          </div>
+          <div class="card-body text-center">
+            <!--<h4 class="nome">Girls Just Have Fun</h4>-->
+            <h4 class="nome">{{verProduto.nome}}</h4>
+            <!--<small class="text-muted">Indie</small>-->
+            <small class="text-muted">{{verProduto.tema}}</small>
+            <!--<p id="preco">R$ 89,90</p>-->
+            <p id="preco">{{verProduto.preco.toFixed(2).replace('.', ',')}}</p>
+            <!--<a class="btn btn-orange w-100" [routerLink]="['/ver-produto']">Ver Detalhes</a>-->
+            <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', verProduto.id]">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+  </div>

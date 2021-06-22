@@ -36,9 +36,22 @@ public class Produto {
 	@Size
 	private String foto;
 	
-	@ManyToOne
-	@JsonIgnoreProperties("produto")
-	private Categoria categoria;
+	@NotNull 
+	@Size
+	private String tema;
+	
+	@NotNull
+	@Size
+	private int estoque;
+	
+	@NotNull
+	@Size
+	private double preco;
+	
+	@NotNull
+	@Size
+	private String modelo;
+	
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -85,14 +98,6 @@ public class Produto {
 		this.foto = foto;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-
 	public Usuario getUsuario() {
 		return usuario;
 	}
@@ -100,7 +105,37 @@ public class Produto {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
-	
+
+	public String getTema() {
+		return tema;
+	}
+
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+
+	public int getEstoque() {
+		return estoque;
+	}
+
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
 	
 }
