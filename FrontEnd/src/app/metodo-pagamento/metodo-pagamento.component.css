@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Kinan";
+    src: url(../../assets/fontes/kinan/Kinan.ttf)
+  }
+
+  @font-face {
+    font-family: "caramella";
+    src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+  }
+
+  h2{
+   color: black;
+   font-size: 40pt;
+   font-family: "caramella";
+  }
+  
+  #valorTotal{
+   color: black;
+   font-size: 70px;
+   font-family: "caramella";
+  }
+  .nav-link{
+    color: #1c372c;
+    font-size: 25px;
+    font-family: "caramella";
+  }
+  .btn-pagar{
+    border-color: green;
+    color: green;
+    background-color: white;
+    margin-bottom: 30px;
+    font-family: "caramella";
+  }
+  
+  .btn-pagar:hover{
+    color: white;
+    background-color: green;
+    margin-bottom: 30px;
+    font-family: "caramella";
+  }
+  
+  .btn-cancelar{
+    border-color: red;
+    color: red;
+    background-color: white;
+    margin-bottom: 30px;
+    font-family: "caramella";
+  }
+
+  .btn-cancelar:hover{
+    color: white;
+    background-color: red;
+    margin-bottom: 30px;
+    font-family: "caramella";
+  }

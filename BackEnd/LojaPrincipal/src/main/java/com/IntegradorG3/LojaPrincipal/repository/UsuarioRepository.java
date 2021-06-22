@@ -11,7 +11,7 @@ import com.IntegradorG3.LojaPrincipal.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
-	public List<Usuario> findAllByNomeCompletoContainingIgnoreCase(String nomeCompleto);
+	public List<Usuario> findAllByNomeContainingIgnoreCase(String nome);
 	public Optional <Usuario> findByEmail (String userName);
 
 }

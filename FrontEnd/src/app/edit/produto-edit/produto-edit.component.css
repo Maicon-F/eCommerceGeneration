@@ -1,0 +1,35 @@
+ 
+   img{
+    align-items: center;
+    max-width: 25%;
+    max-height:25%;
+  }  
+  
+   /* 4 colunas lado a lado numa row */
+   .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  
+  /* Remove espaços extras entre colunas*/
+  .row {margin: 0 -5px;}
+  
+  /* Limpa os floats após as colunas*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  
+  /* Colunas responsivas - uma imagem vertical para dispositivos de telas pequenas */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }

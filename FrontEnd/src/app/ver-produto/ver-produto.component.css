@@ -1,0 +1,161 @@
+
+@font-face {
+    font-family: "Kinan";
+    src: url(../../assets/fontes/kinan/Kinan.ttf)
+  }
+
+  @font-face {
+    font-family: "caramella";
+    src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+  }
+  
+  #grup{
+      display: flex;
+      align-items: center;
+  }
+  
+  .titulo{
+    text-align: center;
+    color: #000000;
+    font-family: "Kinan";
+    font-size: 80pt;
+    margin-bottom: 10px;
+  }
+  
+  #txt-grup{
+      flex-direction: column;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+  }
+  h1{
+  
+      font-size: 50pt;
+    
+  }
+  .bb{
+      margin: 20px;
+      padding: 10px;
+  }
+  .btn{
+      color: white;
+      background-color: #420366;
+      width: 90%;
+  }
+
+  h1{
+    color: #4F4F4F;
+    font-size: 70px;
+   }
+  
+  h2{
+    font-size: 50px;
+    color: #FF4500;
+   }
+  
+   #quantidade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius:0px;
+    max-width: 95px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    margin: 0px;
+    text-align: center;
+  }
+  #minus{
+    float:left;
+    background-color:#420366;
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    border: none;
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  #plus{
+    float:right;
+    background-color:#420366;
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    border: none;
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+   #quant{
+    background-color: white;
+    border: none;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    margin: 0px;
+  }
+  
+  #quantrow{
+    align-items: baseline;
+    margin-top: 20px;
+  }
+
+  #divCor{
+    align-content:space-between;
+  }
+  
+  img{
+    max-width: 1000px;
+    max-height: 1000px;
+  }
+  
+  #tamanho{
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  #button-addon2{
+    padding-right: 20px;
+  }
+  
+  /* 4 colunas lado a lado */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove espaços extras entre colunas */
+.row {margin: 0 -5px;}
+
+/* Limpa floats após as colunas*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estiliza os cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(119, 118, 118, 0.2); /* Adiciona efeito ao card */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    column-count: 1;
+  }
+}

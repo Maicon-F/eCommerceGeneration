@@ -1,0 +1,26 @@
+<div class="container-fluid mt-5 mb-5">
+
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <h1 class="text-center">{{categoria.tema}}</h1>
+    </div>
+  </div>
+<!-- Linha com os cards -->
+  <div class="row d-flex justify-content-center mt-5 mb-5 ml-2">
+    <!--Coluna com os cards -->
+    <div class="col-md-3" *ngFor='let produto of categoria.produto'>
+      <!-- Card com a camiseta -->
+      <div class="card" [routerLink]="['/ver-produto', produto.id]">
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" [routerLink]="['/ver-produto',produto.id]" alt="Foto da camiseta" src="{{produto.foto}}" width="280px">
+        </div>
+        <div class="card-body text-center">
+          <h4 class="nome">{{produto.nome}}</h4>
+          <small class="text-muted">{{produto.tema}}</small>
+          <p id="preco">R$ {{produto.preco.toFixed(2).replace('.', ',')}}</p>
+          <a class="btn btn-orange w-100" [routerLink]="['/ver-produto', produto.id]">VER DETALHES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

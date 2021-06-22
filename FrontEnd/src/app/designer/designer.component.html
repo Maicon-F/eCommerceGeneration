@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-12 column">
+        <h1 class="text-center mb-3 mr-5 font-italic">Seja um Designer</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-11 ">
+                <h2 class=" d-flex justify-content-center  mb-5 mr-5 ml-5">Já pensou em ver seus
+                    designs nas camisetas da HelloWord? </h2>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-11 mr-5 ml-5">
+                    <h3 class="d-flex justify-content-center">
+                        Seja um Designer HelloWord é uma das novidades que nós temos hoje para você
+                        artista que sonha em fazer parte de uma ação social e ver suas criações no mundo
+                        inteiro.
+                        A cada camiseta vendida, outra igual é doada/presenteada pra alguém de nossas
+                        instituições parceiras.
+                        É só enviar seu nome completo, e-mail e portfolio que em breve entraremos em
+                        contato. É uma oportunidade de se jogar no mercado de trabalho e inovar.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row d-flex justify-content-center" id="img-bg">
+
+
+    <div class="col-md-4 column mr-5 ml-5" id="formulario">
+        <form>
+            <div class="form-group">
+                <label for="nome completo"></label>
+                <input type="nome" class="form-control" id="nome" placeholder="Digite seu nome completo."
+                    (keyup)="validaNome($event)">
+                <div class="invalid-feedback">
+                    Insira um nome válido.
+                </div>
+
+            </div>
+            <div class="form-group mb-5">
+                <label for="exampleFormControlInput1"></label>
+                <input type="email" class="form-control" id="nome@exemplo.com" placeholder="Insira seu E-mail "
+                    (keyup)="validaEmail($event)">
+                <div class="invalid-feedback">
+                    Insira um email válido.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="portfolio" class="form-control" id="portfolio"
+                    placeholder="Insira o link  do seu portfolio" (keyup)="validaNome($event)">
+            </div>
+            <div class="invalid-feedback">
+                Insira um link válido.
+            </div>
+
+            <div class="d-flex justify-content-center ">
+                <button type="submit" class="btn btn-success mr-4" (click)='mensagem()'>Enviar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

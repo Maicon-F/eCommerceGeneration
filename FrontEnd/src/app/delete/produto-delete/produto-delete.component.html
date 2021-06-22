@@ -1,0 +1,56 @@
+<div class="container-fluid justify-content-center mt-5 mb-5">
+    <div class="row d-flex justify-content-center mb-5 mt-5">
+        <div class="cold-md-12 text-center text-secondary">
+            <h1> Dados do Produto</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-5 mr-5">
+        <!--Card do Produto-->
+        <div class=" column">
+            <div class="card">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img class="img-fluid" src="{{produto.foto}}">
+                        <h4 class="card-text">{{produto.preco}} R$</h4>
+                        <h5 class="card-text">{{produto.nome}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/Card do Produto-->
+        <div class="column justify-content-center align-items-center">
+
+            <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col ml-5"></th>
+                    <th scope="col ml-4">CATEGORIA</th>
+                    <th scope="col ml-4">MODELO</th>
+                    <th scope="col ml-4">COR</th>
+                    <th scope="col ml-4">TAM</th>
+                    <th scope="col ml-4">ESTOQUE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="justify-content-center"></th>
+                    <td class="justify-content-center" >{{produto.categoria.tema}}</td>
+                    <td class="justify-content-center">{{produto.modelo}}</td>
+                    <td class="justify-content-center">{{produto.cor}}</td>
+                    <td class="justify-content-center">{{produto.tamanho}}</td>
+                    <td class="justify-content-center">{{produto.estoque}}</td>     
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center mb-5 mt-5">
+        <button class="btn btn-success" routerLink="/produto">Voltar</button>
+        <button class="btn btn-danger ml-4" (click)='apagar()'>Apagar</button>
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/YGX1TIQ.jpg');
+    min-height: 695px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@font-face {
+    font-family: "Kinan";
+    src: url(../../assets/fontes/kinan/Kinan.ttf)
+  }
+  
+  @font-face {
+    font-family: "caramella";
+    src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+  }
+    
+  h1{
+    font-family: "Kinan";
+    font-size: 70pt;
+  }
+  
+  h2{
+    font-size: 40px;
+    font-family: "caramella";
+   }
+
+   h3{
+    font-size: 28px;
+    font-family: "caramella";
+   }
+  
+   #formulario{
+     top: 350px;
+   }
+
+   @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      column-count: 1;
+    }
+  }
