@@ -1,0 +1,95 @@
+<div>
+  <!-- Navigation -->
+  <div style="background-color:black">
+     <nav class="navbar navbar-expand-sm navbar-with bg-with d-flex justify-items-center ml-2">
+      <div class="navbar-collapse collapse w-0  order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <img  routerLink='/home' src="https://i.imgur.com/wmOWqA2.png" height="50px" class="d-inline-block align-top" alt="Logo">
+          </li>
+        </ul>
+      </div>
+
+      <!--Itens da Nav-->
+      <div class="navbar navbar-expand-sm d-flex justify-items-center">
+        <div class="navbar-collapse collapse w-0 order-3 dual-collapse2 ">
+          <ul class="navbar-nav ml-1">
+            <li class="nav-item hoover">
+              <a class="navbar-collapse collapse w-0 fs-14 hoover" routerLink='/home'>HOME</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-2">
+            <div class="nav-item dropdown hoover">
+              <a class="btn btn-with dropdown-toggle fs-14 dropdownbtn" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                VITRINE
+              </a>
+              <div class="dropdown-menu hoover2" aria-labelledby="dropdownMenuLink">
+                <a *ngFor='let item of listaCategoria' id="temas" class="dropdown-item " (click)="refresh2(item.id)" value=""
+                  [routerLink]="['/categoria',item.id]">{{item.tema}}</a>
+                <a class="dropdown-item" [routerLink]="['/vitrine']" id="temas">Todos os Produtos</a>
+                <!-- 
+                <a class="dropdown-item" href="">FILMES</a>
+                <a class="dropdown-item" href="">MUSICAS</a>
+                <a class="dropdown-item" href="">SIGNOS</a>
+                <a class="dropdown-item" href="">FRASES</a>
+                <a class="dropdown-item" href="">TEMAS DIVERSOS</a> -->
+              </div>
+            </div>
+
+            <ul class="navbar-nav ml-1">
+
+              <li class="nav-item hoover">
+                <a *ngIf='authService.admin()' class="nav-link fs-14" routerLink='/produto'>INVENTÁRIO</a>
+              </li>
+
+              <li class="nav-item hoover">
+                <a class="nav-link fs-14" routerLink='/designer'>SEJA UM DESIGNER</a>
+              </li>
+              <ul class="navbar-nav ml-2">
+                <li class="nav-item hoover">
+                  <a class="nav-link fs-14" routerLink='/sobre-nos'>SOBRE NÓS</a>
+                </li>
+
+                <ul class="navbar-nav ml-2 ml-5">
+                  <li class="nav-item hoover">
+                    <a class="nav-link fs-14" routerLink='/sobre-nos' [routerLink]="['/user-edit', id]"
+                      *ngIf='authService.logado()'>Olá, {{nome}}</a>
+                  </li>
+
+                  <ul class="navbar-nav ml-2">
+                    <li class="nav-item hoover">
+                      <a (click)='sair()' class="nav-link fs-14" *ngIf='authService.logado()'>Sair <i
+                          class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </li>
+
+                    <!--<ul class="navbar-nav ml-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-white fs-14" href="#">AJUDA</a>
+                  </li>
+                </ul>-->
+                    <li class="nav-item mr-3 ml-3 hoover">
+                      <a class="nav-link">
+                        <a *ngIf='authService.logado()== false' class="m-1 fs-14" routerLink="/entrar">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                      </a>
+                    </li>
+                    <li class="nav-item hoover">
+                      <a class="nav-link">
+                        <a class="fs-14" routerLink="/pedido">
+                          <i class="fa fa-shopping-cart" aria-hidden="true">
+                          </i>
+                        </a>
+                      </a>
+                    </li>
+                  </ul>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>

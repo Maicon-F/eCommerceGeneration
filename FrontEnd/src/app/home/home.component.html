@@ -1,0 +1,137 @@
+<!--Carrosel-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!--<img class="d-block w-100" src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198254926_113204300986092_6630909587025776853_n.png?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeGcfxTRvKJUNKRMn9ctkcfKNPs3wYax1l80-zfBhrHWX3mP8w2dK0SBVBD0-77DkcvKA3EXHPR6ROEOCgO2Yt7g&_nc_ohc=DCOI_iYoUQMAX_wvqHm&_nc_oc=AQmYymbm9zyByWSyGXsRd2Ev4JzrdGBPXAKe5ACYo96PzuwX-ergze093T_mAHeadBJJqTdWD0Tv9jozMoB_CwrI&_nc_ht=scontent.fgru5-1.fna&oh=bcbb0db857ad83e96a4ef3fd594d5f78&oe=60CB8E61" alt="Primeiro Slide">-->
+      <img class="d-block w-100" src="https://i.imgur.com/mnAZhJT.png" alt="Primeiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://i.imgur.com/r3lSMp2.png" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://i.imgur.com/EA6yCPM.png" alt="Terceiro Slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+
+<div class="row ml-4" >
+  <h1 id="emAlta">Em alta:</h1>
+</div>
+<!--/Carrosel-->
+
+<!--Groupo de Imagens de Produtos em Alta-->
+<div class="row mb-5 mt-5">
+  <div class="column">
+    <div class="card">
+      <div class="d-flex justify-content-center foo">
+        <img class="img-fluid" alt="Imagem da camiseta" [routerLink]="['/ver-produto', 92]" src="https://i.imgur.com/CDB6Opg.jpg">
+        <img class="img-fluid" alt="Imagem da camiseta"  [routerLink]="['/ver-produto', 92]" src="https://i.imgur.com/hgZI1Tx.jpg">
+      </div>
+      <div class="card-body text-center">
+        <h4 id="preco">R$ 67</h4>
+        <small class="text-muted"> Metades de Amor</small>
+        <p id="preco"> </p>
+        <a class="btn btn-verde w-70" [routerLink]="['/vitrine']">Ver Produtos</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="d-flex justify-content-center foo">
+        <img class="img-fluid" alt="Imagem da camiseta"
+          src="https://i.imgur.com/N4jFlOn.jpg">
+        <img class="img-fluid" alt="Imagem da camiseta"
+          src="https://i.imgur.com/Oj4IzyF.jpg">
+      </div>
+      <div class="card-body text-center">
+        <h4 id="preco"> R$ 75,90</h4>
+        <small class="text-muted"> Energy Flows</small>
+        <p id="preco"> </p>
+        <a class="btn btn-verde w-70" [routerLink]="['/vitrine']">Ver Produtos</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="d-flex justify-content-center foo">
+        <img class="img-fluid" alt="Imagem da camiseta" [routerLink]="['/vitrine']" src="https://i.imgur.com/j4oXzBG.jpg">
+        <img class="img-fluid" alt="Imagem da camiseta" [routerLink]="['/vitrine']" src="https://i.imgur.com/15IcoiL.jpg">
+      </div>
+      <div class="card-body text-center">
+        <h4 id="preco">R$ 59,60</h4>
+        <small class="text-muted"> Maestria</small>
+        <p id="preco"> </p>
+        <a class="btn btn-verde w-70" [routerLink]="['/vitrine']">Ver Produtos</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <div class="d-flex justify-content-center foo">
+        <img class="img-fluid" alt="Imagem da camiseta"
+          src="https://i.imgur.com/fQdggPb.png">
+        <img class="img-fluid" alt="Imagem da camiseta"
+          src="https://i.imgur.com/ul94aB0.png">
+      </div>
+      <div class="card-body text-center">
+        <h4 id="preco">R$ 65,90</h4>
+        <small class="text-muted">Big Mouth</small>
+        <p id="preco"> </p>
+        <a class="btn btn-verde w-70" [routerLink]="['/vitrine']">Ver Produtos</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Groupo de Imagens de Produtos em Alta-->
+
+<div class="d-flex justify-content-center">
+  <div class="row">
+  <img src="https://i.imgur.com/UMpCOrf.png" alt="">
+</div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="row">
+    <img id="arts" src="https://i.imgur.com/z0ZMODh.jpg" alt="">
+    <img id="arts" src="https://i.imgur.com/5eicorG.jpg" alt="">
+    <img id="arts" src="https://i.imgur.com/suY4bxc.jpg" alt="">
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="row">
+    <img id="arts" src="https://i.imgur.com/ciwlEOS.jpg" alt="">
+    <img id="arts" src="https://i.imgur.com/OFv7LkT.jpg" alt="">
+    <img id="arts" src="https://i.imgur.com/h6S4gUP.jpg" alt="">
+  </div>
+</div>
+
+
+<div class="d-flex justify-content-center">
+  <div class="row">
+  <img id="camiseta" src="https://scontent.fgru5-1.fna.fbcdn.net/v/t1.6435-9/198078827_113324624307393_343850054909506352_n.png?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=2AEEvttLDmgAX_rKNLP&_nc_oc=AQmDNDhjmLLQKt5TamBx_eMiaCtTw8Sqyv_fFr3E6b45og08K0bRNCk_UoGK08I1iCaBMR10qBoYl2PI42kbtkQ2&_nc_ht=scontent.fgru5-1.fna&oh=fa7bfddd35536ee805b52f4c21a36ec1&oe=60D46D8F" alt="">
+</div>
+</div>
+
+<div class="row">
+  <p>
+  </p>
+</div>

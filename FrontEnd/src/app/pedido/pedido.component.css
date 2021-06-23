@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Kinan";
+  src: url(../../assets/fontes/kinan/Kinan.ttf)
+}
+
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+  h1{
+    font-family: "Kinan";
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    font-size: 70pt;
+  }
+  
+  p{
+    color: black;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0px;
+  }
+
+  #nome{
+    font-family: "caramella";
+    font-size: 20pt;
+  }
+
+  #preco{
+    font-family: "caramella";
+    font-size: 20pt;
+  }
+
+  #container-produto{
+    border-color: #FF4500;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    width: 700px;
+    height: auto;
+  }
+
+  #produto{
+    text-align: center;
+    height: 100%;
+  }
+
+  #produto img{
+      width: 100px;
+      margin: 2vh 0 2vh 0;
+  }
+  
+  #subTotal{
+    font-size: 20pt;
+  
+  }
+
+  #confirma{
+      display: flex;
+      justify-content: center;
+  }
+  
+  #total{
+      margin-bottom: 10vh;
+      text-align: right;
+      font-size: 25pt;
+      font-family: "caramella";
+  }
+
+  #comprarMais{
+      width: 30vh;
+      margin-bottom: 5vh;
+      font-size: 12pt;
+      border-color: #FF4500;
+      color: #FF4500;
+      background-color: white;
+      font-family: "caramella";
+  }
+  
+  #comprarMais:hover{
+    width: 30vh;
+    margin-bottom: 5vh;
+    font-size: 12pt;
+    color: white;
+    background-color: #FF4500;
+    font-family: "caramella";
+}
+
+  #fecharPedido{
+      width: 30vh;
+      margin-bottom: 5vh;
+      font-size: 12pt;
+      border-color: green;
+      color: green;
+      background-color: white;
+      font-family: "caramella";
+  }
+
+  #fecharPedido:hover{
+    width: 30vh;
+    margin-bottom: 5vh;
+    font-size: 12pt;
+    color: white;
+    background-color: green;
+    font-family: "caramella";
+}
+  
+  #quantidade{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40pt;
+    font-family: "caramella";
+    width: 200px;
+  }
+  
+  #vazio{
+    text-align: center;
+    color: red;
+  }
+  

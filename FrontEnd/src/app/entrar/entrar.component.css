@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "caramella";
+  src: url(../../assets/fontes/caramella/Caramella_Regular.ttf)
+}
+
+h1{
+  font-family: "caramella";
+  font-size: 40pt;
+  color: black;
+}
+
+.background-color{
+  background-color:#FF4500;
+}
+
+.dialogueBox{
+  border-radius: 50px;
+    box-shadow: 2px 1px 1em;
+}
